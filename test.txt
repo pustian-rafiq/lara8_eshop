@@ -2,4 +2,4 @@ Project Procedures
 
 1) Install laravel
 2) Install livewire
-3) create livewire component
+3) create livewire component ---- home,cart,checkout,shop

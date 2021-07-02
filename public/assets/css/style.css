@@ -4091,7 +4091,7 @@ article.single-post blockquote p:last-child::after{
 .wrap-iten-in-cart .products-cart .delete a.btn:hover i{
     color: #ff2832;
 }
-.shopping-cart .summary{
+.main-content-area .summary{
     display: inline-block;
     background-color: #fdfdfd;
     width: 100%;
@@ -4100,13 +4100,13 @@ article.single-post blockquote p:last-child::after{
     display: table;
     margin-top: 20px;
 }
-.shopping-cart .summary .order-summary{
+.main-content-area .summary .order-summary{
     width: 371px;
     padding-right: 75px;
     display: table-cell;
     vertical-align: middle;
 }
-.shopping-cart .summary .checkout-info{
+.main-content-area .summary .checkout-info{
     width: 259px;
     padding-right: 10px;
     display: table-cell;
@@ -4244,10 +4244,10 @@ article.single-post blockquote p:last-child::after{
     float: initial;
 }
 
-.shopping-cart .main-content-area{
+ .main-content-area{
     margin-bottom: 27px;
 }
-.shopping-cart .wrap-show-advance-info-box{
+ .wrap-show-advance-info-box{
     margin-bottom: 0;
     margin-top: 40px;
 }
