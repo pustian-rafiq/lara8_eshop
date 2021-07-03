@@ -3,3 +3,9 @@ Project Procedures
 1) Install laravel
 2) Install livewire
 3) create livewire component ---- home,cart,checkout,shop
+4) Installing Jetstream with livewire ---composer require laravel/jetstream / php artisan jetstream:install livewire
+
+
+
+// Custome Change Here
+1) Admin and user login part ---- create middleware -- change provider/RouteServiceProvider--vendor/laravel/fortify/src/AttemptToAuthenticate.php
