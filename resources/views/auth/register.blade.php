@@ -105,7 +105,7 @@
 										<label for="frm-reg-cfpass">Confirm Password *</label>
 										<input type="password" id="frm-reg-cfpass" name="password_confirmation" placeholder="Confirm Password">
 									</fieldset>
-									<input type="submit" class="btn btn-sign" value="Register" name="register"  >
+									<input type="submit" class="btn btn-sign" value="Register" name="register" onclick="event.preventDefault()"  >
 								</form>
 							</div>											
 						</div>
