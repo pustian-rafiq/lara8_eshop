@@ -4091,7 +4091,7 @@ article.single-post blockquote p:last-child::after{
 .wrap-iten-in-cart .products-cart .delete a.btn:hover i{
     color: #ff2832;
 }
-.main-content-area .summary{
+.shopping-cart .summary{
     display: inline-block;
     background-color: #fdfdfd;
     width: 100%;
@@ -4100,13 +4100,13 @@ article.single-post blockquote p:last-child::after{
     display: table;
     margin-top: 20px;
 }
-.main-content-area .summary .order-summary{
+.shopping-cart .summary .order-summary{
     width: 371px;
     padding-right: 75px;
     display: table-cell;
     vertical-align: middle;
 }
-.main-content-area .summary .checkout-info{
+.shopping-cart .summary .checkout-info{
     width: 259px;
     padding-right: 10px;
     display: table-cell;

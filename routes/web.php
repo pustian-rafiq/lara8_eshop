@@ -7,11 +7,12 @@ use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Livewire\ProductDetailsComponent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
+|Rezoan Hasan,Mustakim Hasan Jarif/Rafid, Mustakim Hasan Mahir, Farhan Hossain Faiaz/Fahim, MD Akif Hossain. Md labib Hasan. Md. Afif Hossasin Abid/ Arham/ Fuad/ Labib/ Adil/ 
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
@@ -24,8 +25,9 @@ use App\Http\Livewire\User\UserDashboardComponent;
 
 Route::get('/', HomeComponent::class);
 Route::get('/shop', ShopComponent::class);
-Route::get('/cart', CartComponent::class);
+Route::get('/cart', CartComponent::class)->name('product.cart');
 Route::get('/checkout', CheckoutComponent::class);
+Route::get('/product/{slug}', ProductDetailsComponent::class)->name('product.details');
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
