@@ -6,7 +6,8 @@ Project Procedures
 4) Installing Jetstream with livewire ---composer require laravel/jetstream / php artisan jetstream:install livewire
 5) Create product and category model and factory --- php artisan make:factory --model=Category/Product
 6) Install Shopping cart -- composer require hardevine/shoppingcart --- cart add, update, delete, remove , destroy
-7) Product sorting u
+7) Product sorting using condition
+8) Product Seaech using any word or product category
 
 
 
