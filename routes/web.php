@@ -11,6 +11,7 @@ use App\Http\Livewire\ProductDetailsComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
+use App\Http\Livewire\Admin\Category\AddCategoryComponent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,4 +48,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function(){
     Route::get('admin/dashboard',AdminDashboardComponent::class,)->name('admin.dashboard');
     Route::get('admin/categories',AdminCategoryComponent::class,)->name('admin.categories');
+    Route::get('admin/add/category',AddCategoryComponent::class,)->name('admin.addCategory');
 });
