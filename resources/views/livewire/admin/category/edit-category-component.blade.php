@@ -37,7 +37,7 @@
  <div class="container-fluid" style=" box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;">
    <div class="row" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
      <div class="col-md-8">
-      <h3>Add New Category</h3>
+      <h3>Update Category</h3>
      </div>
      <div class="col-md-4">
         <a class="btn btn-success pull-right mt-2" href="{{ route('admin.categories') }}" style="color:#fff">All Categories</a>
@@ -52,7 +52,7 @@
 
        </div>
        @endif
-        <form wire:submit.prevent="addCategory">
+        <form wire:submit.prevent="updateCategory">
           <div class="row mb-3">
             <label for="inputEmail3" class="col-sm-2 col-form-label">Category Name</label>
             <div class="col-sm-10">
@@ -68,7 +68,7 @@
           </div>
          
         
-          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-primary">Update</button>
         </form>
      </div>
      <div class="col-md-2"></div>

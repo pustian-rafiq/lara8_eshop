@@ -8,6 +8,8 @@ Project Procedures
 6) Install Shopping cart -- composer require hardevine/shoppingcart --- cart add, update, delete, remove , destroy
 7) Product sorting using condition
 8) Product Seaech using any word or product category
+9) use custom validation
+10) use livewire and sweet alert -- first install livewire and sweet alert and then use it from documentation
 
 
 

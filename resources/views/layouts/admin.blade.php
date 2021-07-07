@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="{{ asset('assets/css/jquery.dataTables.min.css') }}">
 		
 		<link rel="stylesheet" href="{{ asset('assets/admin/css/style.css') }}">
-
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
 		@livewireStyles
   </head>
   <body>
@@ -79,11 +79,25 @@
     <script src="{{ asset('assets/admin/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets/admin/js/main.js') }}"></script>
+	<script src="{{ asset('https://unpkg.com/sweetalert/dist/sweetalert.min.js')}}"></script>
 	@livewireScripts
+	<!-- Add this for livewire alert -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    </script>
+    <x-livewire-alert::scripts />
 	<script>
 		$(document).ready( function () {
 			$('#table_id').DataTable();
 		} );
 	</script>
+
+{{-- <script type="text/javascript">
+    window.addEventListener('swal',function(e){ 
+    Swal.fire(e.detail);
+}); --}}
+</script>
+ 
+ 
+
   </body>
 </html>

@@ -65,7 +65,7 @@
                         <td>{{ $category->cat_name }}</td>
                         <td>{{ $category->slug }}</td>
                         <td class="fs-1">
-                            <a class="pr-3" href="{{ $category->id }}" title="Edit Category"><span> <i class="fa fa-edit"></i> </span></a>
+                            <a   class="pr-3" href="{{ route('admin.editCategory',['category_slug' => $category->slug])}}" title="Edit Category"><span> <i class="fa fa-edit"></i> </span></a>
                             <a href="{{ $category->id }}" title="Delete Category"><span> <i class="fa fa-trash"></i> </span></a>
                         
                         </td>
@@ -80,4 +80,49 @@
 
  </div>
    
+<!-- Button trigger modal -->
+{{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+    Launch static backdrop modal
+  </button> --}}
+  
+  <!-- Edit Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Category</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form wire:submit.prevent="addCategory">
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-sm-4 col-form-label">Category Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputEmail3" wire:model="category_name" wire:keyup="generateSlug">
+                    @error('category_name') <span class="text-danger">{{ $message }}</span> @enderror
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputPassword3" class="col-sm-4 col-form-label">Category Slug</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputPassword3" wire:model="category_slug">
+                  </div>
+                </div>
+            
+                <button type="submit" class="btn btn-success">Update Category</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+        </div>
+   
+      </div>
+    </div>
   </div>
+  
+
+
+</div>
