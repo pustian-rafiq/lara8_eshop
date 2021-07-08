@@ -37,36 +37,46 @@
     <div class="container">
         <div class="row bg-secondary mt-3 mb-1 p-2">
             <div class="col-md-6 ">
-                <h2 style="color:white">All Categories</h2>
+                <h2 style="color:white">All Products</h2>
             </div>
             <div class="col-md-6 pt-2" >
-                <a class="btn btn-success pull-right " href="{{ route('admin.addCategory') }}">Add New Category</a>
+                <a class="btn btn-success pull-right " href="{{ route('admin.addCategory') }}">Add New Product</a>
             </div>
         </div>
         <div class="row" style=" box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;">
             <div class="col-md-12">
                 {{-- <h2 class="mb-4">Category List</h2> --}}
-                <table id="table_id"  class="display cell-border compact stripe text-center">
+                <table  data-order='[[ 1, "asc" ]]' data-page-length='25' id="table_id"  class="display cell-border compact stripe text-center table-condensed">
                     <thead>
                         <tr>
                             <th>SL No.</th>
-                            <th>Category Name</th>
-                            <th>Category Slug</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Stock</th>
+                            <th>Price</th>
+                            <th>Date</th>
+                           
                             <th>Action</th>
                             {{-- <th>Edit</th>
                             <th>Delete</th> --}}
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($categories as $key => $category)
+                        @foreach ($products as $key => $product)
                         
                         <tr>
                             <td>{{ ++$key }}</td>
-                            <td>{{ $category->cat_name }}</td>
-                            <td>{{ $category->slug }}</td>
+                            <td><img  style="height:50px; wiidth:50px;" src="{{ asset('assets/images/products') }}/{{ $product->image}}" alt="{{ $product->name }}"></td>
+                            <td>{{ $product->product_name }}</td>
+                            <td>{{ $product->category->cat_name }}</td>
+                            <td>{{ $product->stock_status }}</td>
+                            <td>${{ $product->regular_price }}</td>
+                            <td>{{ $product->created_at }}</td>
+                          
                             <td>
-                                <a   class="pr-3" href="{{ route('admin.editCategory',['category_slug' => $category->slug])}}" title="Edit Category"><span> <i class="fa fa-edit"></i> </span></a>
-                                <a href="{{ $category->id }}" wire:click.prevent="deleteId({{ $category->id }})"  data-toggle="modal" data-target="#exampleModal" title="Delete Category"><span> <i class=" fa fa-trash text-danger"></i> </span></a>
+                                <a   class="pr-3" href="{{ route('admin.products',['category_slug' => $product->slug])}}" title="Edit Category"><span> <i class="fa fa-edit"></i> </span></a>
+                                <a href="{{ $product->id }}" wire:click.prevent="deleteId({{ $product->id }})"  data-toggle="modal" data-target="#exampleModal" title="Delete Category"><span> <i class=" fa fa-trash text-danger"></i> </span></a>
                             
                             </td>
                             {{-- <td><a href="{{ $category->id }}" title="Delete Category"><span> <i class="fa fa-trash"></i> </span></a></td> --}}

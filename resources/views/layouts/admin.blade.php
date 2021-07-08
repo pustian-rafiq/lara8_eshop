@@ -39,6 +39,9 @@
 	          <li>
 				<a href="{{ route('admin.categories') }}" ><span> <i class="fa fa-home"></i> </span>Category</a>
 	          </li>
+			  <li>
+				<a href="{{ route('admin.products') }}" ><span> <i class="fa fa-code"></i> </span>Product</a>
+	          </li>
 	          <li>
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span> <i class="fa fa-globe"></i> </span>Pages</a>
               <ul class="collapse list-unstyled" id="pageSubmenu">
@@ -87,16 +90,44 @@
     <x-livewire-alert::scripts />
 	<script>
 		$(document).ready( function () {
-			$('#table_id').DataTable();
+			$('#table_id').DataTable({
+				select: {
+        style:    'os',
+        selector: 'td:first-child',
+        blurable: true
+    },
+				"scrollX": true
+			});
 		} );
 	</script>
 
 {{-- <script type="text/javascript">
     window.addEventListener('swal',function(e){ 
     Swal.fire(e.detail);
-}); --}}
-</script>
- 
+}); 
+</script>--}}
+
+ {{-- Delete Code --}}
+ {{-- <script>  
+	$(document).on("click", "#delete", function(e){
+		e.preventDefault();
+		var link = $(this).attr("href");
+		   swal({
+			 title: "Are you Want to delete?",
+			 text: "Once Delete, This will be Permanently Delete!",
+			 icon: "warning",
+			 buttons: true,
+			 dangerMode: true,
+		   })
+		   .then((willDelete) => {
+			 if (willDelete) {
+				  window.location.href = link;
+			 } else {
+			   swal("Safe Data!");
+			 }
+		   });
+	   });
+</script> --}}
  
 
   </body>

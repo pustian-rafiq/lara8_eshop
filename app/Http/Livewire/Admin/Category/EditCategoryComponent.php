@@ -14,7 +14,8 @@ class EditCategoryComponent extends Component
     public $category_name;
     public $slug;
 
-    public function mount($category_slug){
+    public function mount($category_slug){ 
+        //Get the particular category and row data of that category. Finallay assign data
         $this->category_slug = $category_slug;
         $category = Category::where('slug',$category_slug)->first();
         $this->category_id = $category->id;
