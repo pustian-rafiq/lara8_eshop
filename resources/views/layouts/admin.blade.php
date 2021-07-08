@@ -86,16 +86,20 @@
 	@livewireScripts
 	<!-- Add this for livewire alert -->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+// <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
+// <script src="[ckeditor-build-path]/ckeditor.js"></script>
+
+<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
     </script>
     <x-livewire-alert::scripts />
 	<script>
 		$(document).ready( function () {
 			$('#table_id').DataTable({
 				select: {
-        style:    'os',
-        selector: 'td:first-child',
-        blurable: true
-    },
+				style:    'os',
+				selector: 'td:first-child',
+				blurable: true
+			},
 				"scrollX": true
 			});
 		} );
@@ -128,7 +132,12 @@
 		   });
 	   });
 </script> --}}
- 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
+</script>
+
 
   </body>
 </html>

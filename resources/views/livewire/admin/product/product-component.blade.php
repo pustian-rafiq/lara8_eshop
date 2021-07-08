@@ -40,7 +40,7 @@
                 <h2 style="color:white">All Products</h2>
             </div>
             <div class="col-md-6 pt-2" >
-                <a class="btn btn-success pull-right " href="{{ route('admin.addCategory') }}">Add New Product</a>
+                <a class="btn btn-success pull-right " href="{{ route('admin.addProduct') }}">Add New Product</a>
             </div>
         </div>
         <div class="row" style=" box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;">
