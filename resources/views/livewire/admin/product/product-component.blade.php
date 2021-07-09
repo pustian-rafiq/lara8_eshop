@@ -75,7 +75,7 @@
                             <td>{{ $product->created_at }}</td>
                           
                             <td>
-                                <a   class="pr-3" href="{{ route('admin.products',['category_slug' => $product->slug])}}" title="Edit Category"><span> <i class="fa fa-edit"></i> </span></a>
+                                <a   class="pr-3" href="{{ route('admin.editProduct',['product_slug' => $product->slug])}}" title="Edit Category"><span> <i class="fa fa-edit"></i> </span></a>
                                 <a href="{{ $product->id }}" wire:click.prevent="deleteId({{ $product->id }})"  data-toggle="modal" data-target="#exampleModal" title="Delete Category"><span> <i class=" fa fa-trash text-danger"></i> </span></a>
                             
                             </td>

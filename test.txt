@@ -10,6 +10,7 @@ Project Procedures
 8) Product Seaech using any word or product category
 9) use custom validation
 10) use livewire and sweet alert -- first install livewire and sweet alert and then use it from documentation
+11) Product add with image preview
 
 
 
